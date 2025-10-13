@@ -1,0 +1,11 @@
+services:
+  web:
+    image: php:8.4-apache
+    container_name: citizen-portal
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/var/www/html
+      - ./apache/httpd.conf:/etc/apache2/sites-enabled/000-default.conf:ro
+      - ./apache/logs:/var/log/apache2
