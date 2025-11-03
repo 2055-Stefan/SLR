@@ -1,3 +1,10 @@
+172.19.0.1 - - [20/Oct/2025:12:49:02 +0000] "GET / HTTP/1.1" 200 902 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.19.0.1 - - [20/Oct/2025:12:49:02 +0000] "GET /style.css HTTP/1.1" 200 1146 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.19.0.1 - - [20/Oct/2025:12:49:02 +0000] "GET /favicon.ico HTTP/1.1" 404 497 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.19.0.1 - - [20/Oct/2025:12:49:51 +0000] "-" 408 0 "-" "-"
+172.19.0.1 - - [20/Oct/2025:13:29:50 +0000] "GET / HTTP/1.1" 200 902 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.19.0.1 - - [20/Oct/2025:13:29:50 +0000] "GET /style.css HTTP/1.1" 200 1146 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+172.19.0.1 - - [20/Oct/2025:13:30:39 +0000] "-" 408 0 "-" "-"
 combined
 combined
 172.18.0.1 - - [13/Sep/2025:19:50:45 +0000] "GET / HTTP/1.1" 200 112 "-" "curl/8.5.0"

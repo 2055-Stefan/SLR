@@ -1,3 +1,6 @@
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Mon Oct 20 12:48:40.345867 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Mon Oct 20 12:48:40.345943 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Sat Sep 13 19:46:53.202511 2025] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.65 (Unix) configured -- resuming normal operations
 [Sat Sep 13 19:46:53.203274 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND'
 [Sat Sep 13 19:50:25.167793 2025] [mpm_event:notice] [pid 1:tid 1] AH00492: caught SIGWINCH, shutting down gracefully
