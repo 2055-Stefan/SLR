@@ -42,3 +42,53 @@ AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
 [Mon Oct 20 12:48:34.247435 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Mon Oct 20 12:49:07.069360 2025] [php:error] [pid 17:tid 17] [client 172.18.0.1:56938] script '/var/www/html/dev/preview.php' not found or unable to stat
 [Mon Oct 20 12:49:10.435097 2025] [php:error] [pid 17:tid 17] [client 172.18.0.1:56938] script '/var/www/html/dev/preview.php' not found or unable to stat
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Mon Nov 10 08:32:24.686570 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Mon Nov 10 08:32:24.686648 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 10 13:26:11.252622 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Mon Nov 10 13:26:15.360005 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Mon Nov 10 13:26:15.360070 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Thu Nov 13 20:44:56.543343 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Thu Nov 13 20:44:56.543385 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Thu Nov 13 23:11:56.068320 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Thu Nov 13 23:11:56.068487 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00112: Warning: DocumentRoot [/var/www/html/default] does not exist
+[Sun Nov 16 17:22:45.146914 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.4.13 configured -- resuming normal operations
+[Sun Nov 16 17:22:45.147016 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 17:22:57.211748 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Sun Nov 16 17:35:44.020955 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 17:35:44.021036 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 17:36:15.171138 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Nov 16 17:36:18.075884 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 17:36:18.075960 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 19:04:09.755102 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Nov 16 19:04:19.120414 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 19:04:19.120524 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 19:06:23.733903 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Nov 16 19:06:28.517929 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 19:06:28.517982 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 19:08:22.128835 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Nov 16 19:08:26.261784 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 19:08:26.261839 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 20:48:46.343801 2025] [php:notice] [pid 20:tid 20] [client 172.18.0.1:56876] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:49:36.402362 2025] [php:notice] [pid 21:tid 21] [client 172.18.0.1:60678] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:50:56.692349 2025] [php:notice] [pid 24:tid 24] [client 172.18.0.1:40316] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:51:37.701146 2025] [php:notice] [pid 17:tid 17] [client 172.18.0.1:33754] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:52:05.468527 2025] [php:notice] [pid 18:tid 18] [client 172.18.0.1:57684] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:52:44.601833 2025] [php:notice] [pid 20:tid 20] [client 172.18.0.1:34438] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:53:35.655186 2025] [php:notice] [pid 22:tid 22] [client 172.18.0.1:41620] JWT: missing or invalid Authorization header
+[Sun Nov 16 20:55:21.442994 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Sun Nov 16 20:55:23.857398 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 20:55:23.857450 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 20:56:43.892286 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Sun Nov 16 20:56:47.830123 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 20:56:47.830209 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 20:58:57.237938 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Nov 16 20:59:02.864851 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 16 20:59:02.864917 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

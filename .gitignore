@@ -1,1 +1,22 @@
-BasicUnitTests/vendor/
+# Composer dependencies
+/vendor/
+
+# Apache logs
+apache/logs/
+
+# Ignore any log files
+*.log
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# PHPStorm / VSCode
+.idea/
+.vscode/
+
+# Node (falls du später JS Tools verwendest)
+node_modules/
+
+# Container artefacts
+.env
