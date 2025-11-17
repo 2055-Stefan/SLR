@@ -14,14 +14,12 @@ if ($method !== 'POST') {
     exit;
 }
 
-// Wir erwarten JSON: {"username": "...", "password": "..."}
 $rawBody = file_get_contents('php://input');
 $data    = json_decode($rawBody, true);
 
 $username = $data['username'] ?? null;
 $password = $data['password'] ?? null;
 
-// Simple Demo-Credentials (für CORE3 völlig ausreichend)
 if ($username !== 'demo' || $password !== 'secret') {
     http_response_code(401);
     echo json_encode(['error' => 'Invalid credentials']);
@@ -29,7 +27,6 @@ if ($username !== 'demo' || $password !== 'secret') {
     exit;
 }
 
-// Token ausstellen
 $token = JwtService::createToken($username);
 
 echo json_encode([

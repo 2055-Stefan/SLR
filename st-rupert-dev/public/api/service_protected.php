@@ -10,10 +10,8 @@ require_once __DIR__ . '/../../src/modules/Repository/ServiceRepository.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-// JWT prüfen
 $payload = requireValidJwt();
 
-// id-Parameter validieren
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if ($id === null || $id === false || $id < 1) {

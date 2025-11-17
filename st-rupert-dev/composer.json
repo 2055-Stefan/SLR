@@ -1,5 +1,12 @@
 {
     "require": {
-        "firebase/php-jwt": "^6.11"
+        "firebase/php-jwt": "^6.11",
+        "endroid/qr-code": "^4.8"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
     }
 }
