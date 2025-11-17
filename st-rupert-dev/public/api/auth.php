@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../../vendor/autoload.php';
-require_once __DIR__ . '/../modules/Auth/JwtService.php';
+require_once __DIR__ . '/../../src/modules/Auth/JwtService.php';
 
 header('Content-Type: application/json; charset=utf-8');
 

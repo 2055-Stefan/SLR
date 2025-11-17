@@ -11,7 +11,6 @@ require_once __DIR__ . '/../../src/modules/Repository/ServiceRepository.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-// JWT prüfen (liefert Payload zurück, falls du später Rollen brauchst)
 $payload = requireValidJwt();
 
 $repo     = new ServiceRepository();
