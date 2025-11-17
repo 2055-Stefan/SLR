@@ -6,7 +6,7 @@ JavaScript-Fetch-Aufrufe, responsives UI-Design sowie eine vollständige **JWT-A
 
 ---
 
-# 🚀 Features (Überblick)
+# Features (Überblick)
 
 - Objektorientierte Datenstrukturen (MunicipalService, Application)
 - Seeder für Demo-Daten (3 Services × 4 Applications)
@@ -19,7 +19,7 @@ JavaScript-Fetch-Aufrufe, responsives UI-Design sowie eine vollständige **JWT-A
 
 ---
 
-# 🐳 Installation (Docker)
+# Installation (Docker)
 
 Voraussetzungen:
 - Docker
@@ -28,21 +28,18 @@ Voraussetzungen:
 Starten des Projekts:
 
 docker compose up --build
-
-yaml
-Code kopieren
+composer install
 
 Zugriff über den Browser:
 
 http://localhost/
-
-yaml
-Code kopieren
+http://dev.st-rupert.local/
 
 ---
 
-# 📁 Projektstruktur
+# Projektstruktur
 
+```
 st-rupert-dev/
 │
 ├── apache/ # Apache-Konfiguration + Logs
@@ -58,25 +55,23 @@ st-rupert-dev/
 ├── docker-compose.yaml # Webserver Setup
 └── README.md
 
-yaml
-Code kopieren
-
+```
 ---
 
-# 🧪 Test Scripts
+# Test Scripts
 
 siehe Testskripts der einzelnen COREs  
 z.B.: Core3_Testskript für CORE 3
 
 ---
 
-# 📄 Lizenz
+# Lizenz
 
 Dieses Projekt wurde im Rahmen des HTL Rennweg Unterrichts erstellt  
 und dient ausschließlich zu Ausbildungszwecken.
 
 ---
 
-# 👤 Autoren
+# Autoren
 
 - Stefan Scheer

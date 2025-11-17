@@ -486,3 +486,8 @@ combined
 172.18.0.1 - - [17/Nov/2025:09:14:40 +0000] "GET /js/app.js HTTP/1.1" 200 832 "http://localhost/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
 172.18.0.1 - - [17/Nov/2025:09:14:40 +0000] "GET /api/services.php HTTP/1.1" 200 629 "http://localhost/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
 172.18.0.1 - - [17/Nov/2025:09:15:32 +0000] "-" 408 0 "-" "-"
+172.18.0.1 - - [17/Nov/2025:09:44:31 +0000] "GET / HTTP/1.1" 200 1048 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.18.0.1 - - [17/Nov/2025:09:44:31 +0000] "GET /css/style.css HTTP/1.1" 200 1378 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.18.0.1 - - [17/Nov/2025:09:44:31 +0000] "GET /js/app.js HTTP/1.1" 200 833 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.18.0.1 - - [17/Nov/2025:09:44:31 +0000] "GET /api/services.php HTTP/1.1" 200 629 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+172.18.0.1 - - [17/Nov/2025:09:44:31 +0000] "GET /favicon.ico HTTP/1.1" 404 497 "http://dev.st-rupert.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
