@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/modules/Entities/Application.php';
-require_once __DIR__ . '/modules/Entities/MunicipalService.php';
-require_once __DIR__ . '/modules/Seeder/Seeder.php';
+require_once __DIR__ . '/../src/modules/Entities/Application.php';
+require_once __DIR__ . '/../src/modules/Entities/MunicipalService.php';
+require_once __DIR__ . '/../src/modules/Seeder/Seeder.php';
 
 header('Content-Type: application/json; charset=utf-8');
 

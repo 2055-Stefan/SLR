@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../modules/Entities/Application.php';
-require_once __DIR__ . '/../modules/Entities/MunicipalService.php';
-require_once __DIR__ . '/../modules/Seeder/Seeder.php';
-require_once __DIR__ . '/../modules/Repository/ServiceRepository.php';
+require_once __DIR__ . '/../../src/modules/Entities/Application.php';
+require_once __DIR__ . '/../../src/modules/Entities/MunicipalService.php';
+require_once __DIR__ . '/../../src/modules/Seeder/Seeder.php';
+require_once __DIR__ . '/../../src/modules/Repository/ServiceRepository.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
 $repo = new ServiceRepository();
-$services = $repo->getAll(); // Das fügen wir unten hinzu
+$services = $repo->getAll();
 
 $response = array_map(function ($service) {
     return [

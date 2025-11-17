@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/modules/BuildingApplication.php';
-require_once __DIR__ . '/modules/AppointmentBooking.php';
+require_once __DIR__ . '/../src/modules/BuildingApplication.php';
+require_once __DIR__ . '/../src/modules/AppointmentBooking.php';
 
 $buildingApps = [
     new BuildingApplication("Bauantrag A", "Amt St. Rupert", "Neubau eines Einfamilienhauses."),
@@ -37,7 +37,7 @@ echo <<<HTML
     <meta charset="UTF-8">
     <title>St. Rupert – Bürgerportal Vorschau</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js" defer></script>
+    <script src="/js/app.js" defer></script>
 </head>
 <body>
     <header>

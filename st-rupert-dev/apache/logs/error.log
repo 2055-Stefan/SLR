@@ -92,3 +92,13 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sun Nov 16 20:58:57.237938 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
 [Sun Nov 16 20:59:02.864851 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
 [Sun Nov 16 20:59:02.864917 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Nov 16 22:18:43.859714 2025] [php:notice] [pid 40:tid 40] [client 172.18.0.1:45774] JWT login failed for user: unknown
+[Sun Nov 16 22:18:53.496982 2025] [php:notice] [pid 37:tid 37] [client 172.18.0.1:60552] JWT login failed for user: unknown
+[Sun Nov 16 22:19:28.371749 2025] [php:notice] [pid 39:tid 39] [client 172.18.0.1:57216] JWT login failed for user: unknown
+[Sun Nov 16 22:20:13.278826 2025] [php:notice] [pid 38:tid 38] [client 172.18.0.1:43072] JWT: missing or invalid Authorization header
+[Mon Nov 17 08:56:19.888415 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Nov 17 08:56:26.569350 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 17 08:56:26.569588 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 17 08:56:41.079164 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Nov 17 08:56:57.701256 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 17 08:56:57.701352 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

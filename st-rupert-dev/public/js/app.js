@@ -6,14 +6,14 @@ function fetchServices() {
     fetch("/api/services.php", {
         headers: { "Accept": "application/json" }
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Fehler beim Laden: " + response.status);
-            }
-            return response.json();
-        })
-        .then(data => renderServices(data))
-        .catch(err => console.error(err));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Fehler beim Laden: " + response.status);
+        }
+        return response.json();
+    })
+    .then(data => renderServices(data))
+    .catch(err => console.error(err));
 }
 
 function renderServices(services) {
