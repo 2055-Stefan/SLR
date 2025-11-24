@@ -104,3 +104,17 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Mon Nov 17 08:56:57.701352 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Mon Nov 17 12:35:42.742937 2025] [php:notice] [pid 30:tid 30] [client 172.18.0.1:54606] JWT: invalid token - Signature verification failed
 [Mon Nov 17 14:29:54.269344 2025] [php:notice] [pid 26:tid 26] [client 172.18.0.1:39766] JWT: invalid token - Signature verification failed
+[Mon Nov 17 16:34:54.869743 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 17 16:34:54.870150 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 18 09:06:09.624524 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Tue Nov 18 09:06:09.625019 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 18 09:09:31.111876 2025] [php:error] [pid 41:tid 41] [client 172.19.0.1:59746] script '/var/www/html/public/services.php' not found or unable to stat
+[Mon Nov 24 14:20:08.913158 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 24 14:20:08.913445 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 24 16:13:13.083195 2025] [php:error] [pid 41:tid 41] [client 172.19.0.1:48438] script '/var/www/html/public/api/qr.php' not found or unable to stat
+[Mon Nov 24 16:33:31.328564 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Nov 24 16:33:33.065244 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 24 16:33:33.065311 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 24 16:34:54.079062 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Nov 24 16:35:01.475834 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Mon Nov 24 16:35:01.475875 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
