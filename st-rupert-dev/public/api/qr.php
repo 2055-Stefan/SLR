@@ -1,12 +1,17 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+// ...existing code...
+require '../../vendor/autoload.php';
 
-use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
 
-header('Content-Type: image/png');
+// ...existing code...
+$qrCode = new QrCode('https://www.example.com');
 
-echo Builder::create()
-    ->data('API Test QR Code')
-    ->size(250)
-    ->build()
-    ->getString();
+$writer = new PngWriter();
+$result = $writer->write($qrCode);
+
+header('Content-Type: ' . $result->getMimeType());
+echo $result->getString();
+// ...existing code...
+?>
