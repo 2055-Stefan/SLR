@@ -1,10 +1,13 @@
 <?php
 declare(strict_types=1);
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\modules\BuildingApplication;
 use App\modules\AppointmentBooking;
-require_once __DIR__ . '/../vendor/autoload.php';
+use App\Template\TemplateEngine;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
 
 $buildingApps = [
     new BuildingApplication("Bauantrag A", "Amt St. Rupert", "Neubau eines Einfamilienhauses."),
@@ -22,61 +25,25 @@ $appointments = [
     new AppointmentBooking("Termin E", "Bürgerbüro", "17.10.2025 15:00 Uhr")
 ];
 
-$buildingAppEntries = "";
-foreach ($buildingApps as $app) {
-    $buildingAppEntries .= $app->render();
-}
 
-$appointmentEntries = "";
-foreach ($appointments as $appt) {
-    $appointmentEntries .= $appt->render();
-}
+// US5 – CORE
 
-echo <<<HTML
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>St. Rupert – Bürgerportal Vorschau</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="/js/app.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Bürgerportal St. Rupert</h1>
-        <p>Vorschau der Portal-Module (Version 1.0.0)</p>
-    </header>
+$us5DemoHtml = TemplateEngine::render(
+    __DIR__ . '/../templates/us5-demo.html',
+    [
+        'title'       => 'US5 – Eigenes Templating',
+        'description' => 'Diese Ausgabe wird mit fread/file_get_contents und str_replace erzeugt.'
+    ]
+);
 
-    <main>
 
-        <!-- Bauanträge -->
-        <section>
-            <h2>Bauanträge</h2>
-            <div class="entries">
-                $buildingAppEntries
-            </div>
-        </section>
+// ADV – Twig
 
-        <!-- Terminbuchungen -->
-        <section>
-            <h2>Terminbuchungen</h2>
-            <div class="entries">
-                $appointmentEntries
-            </div>
-        </section>
+$loader = new FilesystemLoader(__DIR__ . '/../templates');
+$twig   = new Environment($loader);
 
-        <!-- US4 – Live geladene Gemeindedienste -->
-        <section>
-            <h2>Gemeindedienste (API)</h2>
-            <p>Diese Daten werden via JavaScript Fetch von /api/services.php geladen.</p>
-            <ul id="service-list"></ul>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Gemeinde St. Rupert | Bürgerportal</p>
-    </footer>
-</body>
-</html>
-HTML;
+echo $twig->render('index.twig', [
+    'buildingApps' => $buildingApps,
+    'appointments' => $appointments,
+    'us5DemoHtml'  => $us5DemoHtml
+]);
