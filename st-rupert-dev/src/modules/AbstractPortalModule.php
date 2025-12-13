@@ -1,5 +1,5 @@
 <?php
-require_once "PortalModule.php";
+namespace App\modules;
 
 abstract class AbstractPortalModule implements PortalModule {
     protected string $title;

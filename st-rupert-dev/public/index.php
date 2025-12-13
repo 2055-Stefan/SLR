@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/../vendor/autoload.php';
 
-require_once __DIR__ . '/../src/modules/BuildingApplication.php';
-require_once __DIR__ . '/../src/modules/AppointmentBooking.php';
+use App\modules\BuildingApplication;
+use App\modules\AppointmentBooking;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $buildingApps = [

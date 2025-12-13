@@ -1,5 +1,5 @@
 <?php
-require_once "AbstractPortalModule.php";
+namespace App\modules;
 
 class BuildingApplication extends AbstractPortalModule {
     private string $description;

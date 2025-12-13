@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bürgerportal St. Rupert{% endblock %}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+
+    {% include "partials/header.twig" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.twig" %}
+
+</body>
+</html>
