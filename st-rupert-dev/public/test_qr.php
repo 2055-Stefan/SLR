@@ -7,7 +7,7 @@ use Endroid\QrCode\Writer\PngWriter;
 
 $result = Builder::create()
     ->writer(new PngWriter())
-    ->data('Hallo Stefan!')
+    ->data('Hallo Lukas!')
     ->size(300)
     ->margin(10)
     ->build();

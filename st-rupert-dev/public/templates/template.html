@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{portal_name}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .feature {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .feature h3 {
+            color: #003366;
+        }
+        @media (max-width: 768px) {
+            .feature {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bürgerportal St. Rupert - Funktionen</h1>
+    </header>
+
+    <div class="container">
+        <section class="feature">
+            <h3>{{feature_1_title}}</h3>
+            <p>{{feature_1_description}}</p>
+        </section>
+
+        <section class="feature">
+            <h3>{{feature_2_title}}</h3>
+            <p>{{feature_2_description}}</p>
+        </section>
+
+        <section class="feature">
+            <h3>{{feature_3_title}}</h3>
+            <p>{{feature_3_description}}</p>
+        </section>
+    </div>
+</body>
+</html>
