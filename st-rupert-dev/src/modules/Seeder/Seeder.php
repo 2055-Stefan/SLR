@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../Entities/Application.php';
-require_once __DIR__ . '/../Entities/MunicipalService.php';
+namespace App\modules\Seeder;
+
+use App\modules\Entities\Application;
+use App\modules\Entities\MunicipalService;
 
 class Seeder
 {

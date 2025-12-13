@@ -1,5 +1,5 @@
 <?php
-require_once "AbstractPortalModule.php";
+namespace App\modules;
 
 class AppointmentBooking extends AbstractPortalModule {
     private string $date;

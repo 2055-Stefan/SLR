@@ -1,12 +1,10 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/jwt_guard.php';
 
-require_once __DIR__ . '/../../src/modules/Entities/Application.php';
-require_once __DIR__ . '/../../src/modules/Entities/MunicipalService.php';
-require_once __DIR__ . '/../../src/modules/Seeder/Seeder.php';
-require_once __DIR__ . '/../../src/modules/Repository/ServiceRepository.php';
+use App\modules\Repository\ServiceRepository;
 
 header('Content-Type: application/json; charset=utf-8');
 

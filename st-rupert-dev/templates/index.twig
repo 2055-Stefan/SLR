@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block title %}Bürgerportal – Übersicht{% endblock %}
+
+{% block content %}
+
+<section id="bauanträge">
+    <h2>Bauanträge</h2>
+
+    <div class="entries">
+        {% for app in buildingApps %}
+            {% include 'building/building.twig' with { app: app } %}
+        {% endfor %}
+    </div>
+</section>
+
+<section id="termine">
+    <h2>Terminbuchungen</h2>
+
+    <div class="entries">
+        {% for appt in appointments %}
+            {% include 'appointment/appointment.twig' with { appt: appt } %}
+        {% endfor %}
+    </div>
+</section>
+
+<section id="dienste">
+    <h2>Gemeindedienste (API)</h2>
+
+    <p>Daten werden via JavaScript Fetch von <code>/api/services.php</code> geladen.</p>
+
+    <ul id="service-list"></ul>
+</section>
+
+{% endblock %}

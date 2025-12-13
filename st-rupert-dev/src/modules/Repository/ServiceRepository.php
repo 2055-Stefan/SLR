@@ -1,7 +1,10 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../Seeder/Seeder.php';
+namespace App\modules\Repository;
+
+use App\modules\Seeder\Seeder;
+use App\modules\Entities\MunicipalService;
 
 class ServiceRepository
 {
