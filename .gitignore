@@ -1,25 +1,8 @@
-# Composer dependencies
-/vendor/
+# Composer
+vendor/
+**/vendor/
 
-# Apache logs
-apache/logs/
-
-# Ignore any log files
+# Logs
 *.log
-
-# OS / Editor junk
-.DS_Store
-Thumbs.db
-
-# PHPStorm / VSCode
-.idea/
-.vscode/
-
-# Node (falls du später JS Tools verwendest)
-node_modules/
-
-# Container artefacts
-.env
-
-# Komprimmierte Dateien
-.zip
+logs/
+**/logs/

@@ -36,6 +36,30 @@ $us5DemoHtml = TemplateEngine::render(
     ]
 );
 
+// US6 - CORE
+
+$features = [
+    [
+        'title' => 'Digitale Bauanträge',
+        'description' => 'Bauanträge online einreichen'
+    ],
+    [
+        'title' => 'Terminbuchung',
+        'description' => 'Online Termine im Bürgerbüro'
+    ],
+    [
+        'title' => 'Abfallkalender',
+        'description' => 'Abholtermine digital abrufen'
+    ],
+];
+
+$us6DemoHtml = TemplateEngine::render(
+    __DIR__ . '/../templates/us6-demo.html',
+    [
+        'features' => $features
+    ]
+);
+
 
 // ADV – Twig
 
@@ -45,5 +69,6 @@ $twig   = new Environment($loader);
 echo $twig->render('index.twig', [
     'buildingApps' => $buildingApps,
     'appointments' => $appointments,
-    'us5DemoHtml'  => $us5DemoHtml
+    'us5DemoHtml'  => $us5DemoHtml,
+    'us6DemoHtml'  => $us6DemoHtml
 ]);

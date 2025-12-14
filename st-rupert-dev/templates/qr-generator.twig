@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block title %}QR-Code Generator{% endblock %}
+
+{% block content %}
+<section class="service-card">
+    <h2>QR-Code Generator</h2>
+
+    <form method="post" class="qr-form">
+        <label for="phone">Notfallnummer:</label>
+        <input
+            type="text"
+            id="phone"
+            name="phone"
+            value="{{ input }}"
+            placeholder="+43 123 456"
+            required
+        >
+
+        <button type="submit">QR-Code erzeugen</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if qrCode %}
+        <div class="qr-code">
+            <p><strong>Generierter QR-Code:</strong></p>
+            <img
+                src="data:image/png;base64,{{ qrCode }}"
+                alt="QR-Code für {{ input }}">
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
