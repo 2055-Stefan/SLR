@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    {{ service.name }} – Gemeindedienst
+{% endblock %}
+
+{% block content %}
+<section class="service-card">
+    <a href="/index.php" class="back-link">← Zurück</a>
+
+    <h2>{{ service.name }}</h2>
+
+    <p>
+        <strong>Abteilung:</strong> {{ service.relatedDepartment }}<br>
+        <strong>Seit:</strong> {{ service.year }}
+    </p>
+
+    <hr>
+
+    <p>
+        <strong>Notfallnummer:</strong><br>
+        {{ service.emergencyNumber }}
+    </p>
+
+    <div class="qr-code">
+        <img
+            src="data:image/png;base64,{{ qrCode }}"
+            alt="QR-Code für Notfallnummer {{ service.emergencyNumber }}">
+    </div>
+</section>
+{% endblock %}

@@ -161,3 +161,73 @@ main h2 {
     opacity: 1;                 /* etwas heller beim Hover */
     text-decoration: underline; /* dezente Unterstreichung */
 }
+
+/* ======== QR Code Generator Styles ======== */
+
+.qr-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.qr-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.qr-form button {
+    padding: 0.6rem;
+    background: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.qr-form button:hover {
+    opacity: 0.9;
+}
+
+.qr-code {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ======== Navigation ======== */
+nav ul {
+    list-style: none;
+    margin-top: 10;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ======== QR-Code Generator Button ======== */
+nav ul li:last-child a {
+    background: #ffffff;
+    color: #004080 !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px; /* pill-style */
+    font-weight: 600;
+    transition: 0.2s ease, transform 0.1s ease;
+}
+
+nav ul li:last-child a:hover {
+    background: #e6e6e6;
+    transform: translateY(-1px);
+}

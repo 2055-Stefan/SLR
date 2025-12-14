@@ -7,16 +7,46 @@ class TemplateEngine
 {
     public static function render(string $file, array $data): string
     {
-        if (!file_exists($file)) {
-            return '';
+        $template = file_get_contents($file);
+
+        // 1 Loop-Verarbeitung
+        foreach ($data as $key => $value) {
+            if (is_array($value)) {
+                $template = self::renderLoop($template, $key, $value);
+            }
         }
 
-        $template = file_get_contents($file); // = fread erlaubt
-
+        // 2 Einfache Platzhalter
         foreach ($data as $key => $value) {
-            $template = str_replace('{{' . $key . '}}', $value, $template);
+            if (!is_array($value)) {
+                $template = str_replace('{{'.$key.'}}', (string) $value, $template);
+            }
         }
 
         return $template;
+    }
+
+    private static function renderLoop(string $template, string $key, array $items): string
+    {
+        $pattern = '/{{#'.$key.'}}(.*?){{\/'.$key.'}}/s';
+
+        if (!preg_match($pattern, $template, $matches)) {
+            return $template;
+        }
+
+        $block = $matches[1];
+        $result = '';
+
+        foreach ($items as $item) {
+            $row = $block;
+
+            foreach ($item as $itemKey => $itemValue) {
+                $row = str_replace('{{'.$itemKey.'}}', (string) $itemValue, $row);
+            }
+
+            $result .= $row;
+        }
+
+        return preg_replace($pattern, $result, $template);
     }
 }

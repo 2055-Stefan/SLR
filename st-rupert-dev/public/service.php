@@ -1,35 +1,43 @@
 <?php
 declare(strict_types=1);
 
-$id = $_GET['id'] ?? null;
+require_once __DIR__ . '/../vendor/autoload.php';
 
-echo <<<HTML
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Gemeindedienst Details</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script>
-        const SERVICE_ID = "$id";
-    </script>
-    <script src="js/service.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Gemeindedienst</h1>
-        <a href="/index.php" class="back-link">← Zurück</a>
-    </header>
+use App\modules\Repository\ServiceRepository;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\Writer\PngWriter;
 
-    <main>
-        <div id="service-container" class="service-card">
-            <p>Service wird geladen…</p>
-        </div>
-    </main>
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
-    <footer>
-        <p>&copy; 2025 Gemeinde St. Rupert</p>
-    </footer>
-</body>
-</html>
-HTML;
+if (!$id) {
+    http_response_code(400);
+    die('Ungültige Service-ID');
+}
+
+
+$repo    = new ServiceRepository();
+$service = $repo->findById($id);
+
+if (!$service) {
+    http_response_code(404);
+    die('Service nicht gefunden');
+}
+
+$qrResult = Builder::create()
+    ->writer(new PngWriter())
+    ->data($service->getEmergencyNumber())
+    ->size(200)
+    ->margin(10)
+    ->build();
+
+$qrBase64 = base64_encode($qrResult->getString());
+
+$loader = new FilesystemLoader(__DIR__ . '/../templates');
+$twig   = new Environment($loader);
+
+echo $twig->render('service.twig', [
+    'service' => $service,
+    'qrCode'  => $qrBase64
+]);
