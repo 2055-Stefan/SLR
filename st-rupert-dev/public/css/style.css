@@ -138,28 +138,9 @@ main h2 {
     border-radius: 8px;
 }
 
-.back-link {
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
 .error {
     color: red;
     text-align: center;
-}
-
-.back-link {
-    color: #ffffff;             /* Link in Weiß */
-    text-decoration: none;      /* keine Unterstreichung */
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    opacity: 0.9;
-}
-
-.back-link:hover {
-    opacity: 1;                 /* etwas heller beim Hover */
-    text-decoration: underline; /* dezente Unterstreichung */
 }
 
 /* ======== QR Code Generator Styles ======== */
@@ -196,15 +177,10 @@ main h2 {
 /* ======== Navigation ======== */
 nav ul {
     list-style: none;
-    margin-top: 10;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-}
-
-nav ul li {
-    margin: 0;
 }
 
 nav ul li a {
@@ -217,17 +193,40 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* ======== QR-Code Generator Button ======== */
-nav ul li:last-child a {
+/* ======== Navigation Buttons (QR / Theme) ======== */
+nav ul li a.nav-btn {
     background: #ffffff;
     color: #004080 !important;
     padding: 0.4rem 0.8rem;
-    border-radius: 999px; /* pill-style */
+    border-radius: 999px;
     font-weight: 600;
-    transition: 0.2s ease, transform 0.1s ease;
+    text-decoration: none;
+    transition:  0.2s ease, transform 0.1s ease;
 }
 
-nav ul li:last-child a:hover {
-    background: #e6e6e6;
-    transform: translateY(-1px);
+header nav {
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ======== Dark Mode Button Anpassung ======== */
+body.dark nav ul li a.nav-btn {
+    background: #1e1e1e;
+    color: #90caf9 !important;
+    margin-left: -2px;
+}
+
+body.dark nav ul li a.nav-btn:hover {
+    background: #2a2a2a;
 }
