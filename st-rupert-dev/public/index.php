@@ -26,37 +26,28 @@ $appointments = [
 ];
 
 
-// US5 – CORE
-
-$us5DemoHtml = TemplateEngine::render(
-    __DIR__ . '/../templates/us5-demo.html',
-    [
-        'title'       => 'US5 – Eigenes Templating',
-        'description' => 'Diese Ausgabe wird mit fread/file_get_contents und str_replace erzeugt.'
-    ]
-);
-
-// US6 - CORE
+// US56 Demo HTML
 
 $features = [
     [
         'title' => 'Digitale Bauanträge',
-        'description' => 'Bauanträge online einreichen'
+        'description' => 'Bauanträge online einreichen und verwalten.'
     ],
     [
         'title' => 'Terminbuchung',
-        'description' => 'Online Termine im Bürgerbüro'
+        'description' => 'Online Termine im Bürgerbüro buchen.'
     ],
     [
-        'title' => 'Abfallkalender',
-        'description' => 'Abholtermine digital abrufen'
+        'title' => 'Gemeindedienste (API)',
+        'description' => 'Zugriff auf Gemeindedienste über eine REST-API.'
     ],
 ];
 
-$us6DemoHtml = TemplateEngine::render(
-    __DIR__ . '/../templates/us6-demo.html',
+$us56DemoHtml = TemplateEngine::render(
+    __DIR__ . '/../templates/template.html',
     [
-        'features' => $features
+        'portal_name' => 'Bürgerportal St. Rupert',
+        'features'    => $features
     ]
 );
 
@@ -69,6 +60,5 @@ $twig   = new Environment($loader);
 echo $twig->render('index.twig', [
     'buildingApps' => $buildingApps,
     'appointments' => $appointments,
-    'us5DemoHtml'  => $us5DemoHtml,
-    'us6DemoHtml'  => $us6DemoHtml
+    'us56DemoHtml' => $us56DemoHtml
 ]);
