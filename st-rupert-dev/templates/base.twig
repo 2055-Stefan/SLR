@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/app.js" defer></script>
 </head>
-<body>
+<body class="{{ theme }}">
 
     {% include "partials/header.twig" %}
+
+    <div class="portal-info">
+        <p>Theme: {{ theme }}</p>
+        <p>Besuche in dieser Session: {{ visitCount }}</p>
+    </div>
 
     <main>
         {% block content %}{% endblock %}
@@ -17,4 +22,5 @@
     {% include "partials/footer.twig" %}
 
 </body>
+
 </html>
