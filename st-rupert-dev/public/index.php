@@ -2,67 +2,17 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 use App\modules\BuildingApplication;
 use App\modules\AppointmentBooking;
 use App\Template\TemplateEngine;
 use Twig\Loader\FilesystemLoader;
+use App\Session\SessionManager;
+use App\Cookies\CookieManager;
 use Twig\Environment;
 
-ini_set('session.gc_maxlifetime', '1800');
-ini_set('session.cookie_httponly', '1');
-ini_set('session.cookie_samesite', 'Lax');
-
-$secure = !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
-
-ini_set('session.cookie_secure', $secure ? '1' : '0');
-
-session_set_cookie_params([
-    'lifetime' => 1800,
-    'path' => '/',
-    'secure' => $secure,
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-session_start();
-
-if (!isset($_SESSION['initiated'])) {
-    session_regenerate_id(true);
-    $_SESSION['initiated'] = true;
-}
-
-if (isset($_GET['theme'])) {
-    setcookie(
-        'theme',
-        $_GET['theme'],
-        time() + 3600,
-        '/',
-        '',
-        $secure,
-        false
-    );
-    $theme = $_GET['theme'];
-} elseif (isset($_COOKIE['theme'])) {
-    $theme = $_COOKIE['theme'];
-} else {
-    setcookie(
-        'theme',
-        'light',
-        time() + 3600,
-        '/',
-        '',
-        $secure,
-        false
-    );
-    $theme = 'light';
-}
-
-if (!isset($_SESSION['visit_count'])) {
-    $_SESSION['visit_count'] = 1;
-} else {
-    $_SESSION['visit_count']++;
-}
+// Bauanträge und Termine
 
 $buildingApps = [
     new BuildingApplication("Bauantrag A", "Amt St. Rupert", "Neubau eines Einfamilienhauses."),
@@ -115,5 +65,5 @@ echo $twig->render('index.twig', [
     'appointments' => $appointments,
     'us56DemoHtml' => $us56DemoHtml,
     'theme' => $theme,
-    'visitCount' => $_SESSION['visit_count']
+    'visitCount' => SessionManager::get('visit_count')
 ]);

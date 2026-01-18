@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchServices();
-    initThemeToggle();
 });
 
 function fetchServices() {
@@ -36,20 +35,3 @@ function renderServices(services) {
         list.appendChild(li);
     });
 }
-
-/* ======== Theme Toggle ======== */
-function initThemeToggle() {
-    const toggle = document.querySelector(".theme-toggle");
-    if (!toggle) return;
-
-    toggle.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        const isDark = document.body.classList.contains("dark");
-        const newTheme = isDark ? "light" : "dark";
-
-        window.location.href = `/index.php?theme=${newTheme}`;
-    });
-}
-
-

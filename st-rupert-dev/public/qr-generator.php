@@ -2,11 +2,14 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Writer\PngWriter;
+use App\Session\SessionManager;
+use App\Cookies\CookieManager;
 
 $loader = new FilesystemLoader(__DIR__ . '/../templates');
 $twig   = new Environment($loader);
@@ -33,7 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 echo $twig->render('qr-generator.twig', [
-    'qrCode' => $qrCode,
-    'error'  => $error,
-    'input'  => $input
+    'qrCode'     => $qrCode,
+    'error'      => $error,
+    'input'      => $input,
+    'theme'      => $theme,
+    'visitCount' => SessionManager::get('visit_count')
 ]);
+

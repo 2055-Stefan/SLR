@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http;
+namespace App\Cookies;
 
 class CookieManager
 {
@@ -10,7 +10,7 @@ class CookieManager
         string $value,
         int $lifetime = 3600
     ): void {
-        setcookie(
+        setCookie (
             $name,
             $value,
             [
@@ -23,13 +23,18 @@ class CookieManager
         );
     }
 
-    public static function get(string $name): ?string
-    {
+    public static function get(string $name): ?string {
         return $_COOKIE[$name] ?? null;
     }
 
-    public static function delete(string $name): void
-    {
-        setcookie($name, '', time() - 3600, '/');
+    public static function delete(string $name): void {
+        setCookie($name, '', [
+            'expires' => time() - 3600,
+            'path' => '/',
+            'secure' => true,
+            'httponly' => false,
+            'samesite' => 'Lax',
+        ]);
     }
+
 }

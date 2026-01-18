@@ -11,7 +11,7 @@
     {% include "partials/header.twig" %}
 
     <div class="portal-info">
-        <p>Theme: {{ theme }}</p>
+        <p>Theme: {{ theme|default('light') }}</p>
         <p>Besuche in dieser Session: {{ visitCount }}</p>
     </div>
 

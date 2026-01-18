@@ -2,12 +2,15 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 use App\modules\Repository\ServiceRepository;
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Writer\PngWriter;
+use App\Session\SessionManager;
+use App\Cookies\CookieManager;
 
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
@@ -38,6 +41,9 @@ $loader = new FilesystemLoader(__DIR__ . '/../templates');
 $twig   = new Environment($loader);
 
 echo $twig->render('service.twig', [
-    'service' => $service,
-    'qrCode'  => $qrBase64
+    'service'    => $service,
+    'qrCode'     => $qrBase64,
+    'theme'      => $theme,
+    'visitCount' => SessionManager::get('visit_count')
 ]);
+
