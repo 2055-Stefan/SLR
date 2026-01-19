@@ -20,6 +20,9 @@
         <button type="submit">QR-Code erzeugen</button>
     </form>
 
+    {# XSS-Demo: absichtlich unsichere Ausgabe mittels |raw#}
+    <p>Vorschau (unsicher): {{ input|raw}}</p>
+
     {% if error %}
         <p class="error">{{ error }}</p>
     {% endif %}

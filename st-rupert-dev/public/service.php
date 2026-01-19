@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/init_app.php';
 
 use App\modules\Repository\ServiceRepository;
 use Twig\Loader\FilesystemLoader;
