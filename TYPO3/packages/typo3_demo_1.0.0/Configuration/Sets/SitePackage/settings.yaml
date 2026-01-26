@@ -1,0 +1,28 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:typo3_demo/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:typo3_demo/Resources/Private/Partials/'
+      templateRootPath: 'EXT:typo3_demo/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:typo3_demo/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:typo3_demo/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:typo3_demo/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:typo3_demo/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:typo3_demo/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:typo3_demo/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:typo3_demo/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:typo3_demo/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:typo3_demo/Resources/Private/Templates/Page/'

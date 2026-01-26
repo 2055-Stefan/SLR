@@ -1,0 +1,4 @@
+name: htl3r/typo3-demo
+label: 'TYPO3 - Demo'
+dependencies:
+  - bootstrap-package/full

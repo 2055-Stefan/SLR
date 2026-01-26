@@ -1,0 +1,21 @@
+page {
+    includeCSS {
+        theme = EXT:typo3_demo/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        typo3_demo_scripts = EXT:typo3_demo/Resources/Public/JavaScript/main.js
+    }
+}

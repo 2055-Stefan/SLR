@@ -8,8 +8,6 @@ SessionManager::start();
 
 $theme = CookieManager::get('theme', 'light');
 
-// Theme wechseln
-
 if (isset($_GET['theme'])) {
     $theme = $_GET['theme'] === 'dark' ? 'dark' : 'light';
     CookieManager::set('theme', $theme);
@@ -21,7 +19,6 @@ if (isset($_GET['theme'])) {
     exit;
 }
 
-// Seitenaufrufe zählen
 if (!SessionManager::has('visit_count')) {
     SessionManager::set('visit_count', 1);
 } else {
